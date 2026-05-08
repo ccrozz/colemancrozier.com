@@ -480,8 +480,8 @@ export default function MultitudesBento() {
     <section className="bg-[var(--color-shell)] py-24">
       <div className="section-wrap">
         <Reveal>
-          <p className="eyebrow !text-[var(--color-deep-sea)]">The Multitudes</p>
-          <h2 className="font-heading text-5xl text-[var(--color-ink)]">A living bento field journal</h2>
+          <p className="eyebrow !text-[var(--color-deep-sea)]">Not a single lane</p>
+          <h2 className="font-heading text-5xl text-[var(--color-ink)]">Where the days actually go.</h2>
         </Reveal>
 
         <div className="mt-10 grid grid-cols-1 gap-5 lg:grid-cols-12 lg:gap-5">
@@ -753,7 +753,7 @@ export default function MultitudesBento() {
                 <p className="eyebrow !text-[var(--color-deep-sea)]">Public playlists</p>
                 <h3 className="mt-2 font-heading text-4xl text-[var(--color-ink)]">The Stereo</h3>
                 <p className="mt-3 text-sm leading-relaxed text-[color:color-mix(in_srgb,var(--color-ink)_85%,transparent)]">
-                  Playlists I&apos;ve been listening to lately on{' '}
+                  My most recent playlists on{' '}
                   <a
                     href={`${soundcloudProfile}/sets`}
                     target="_blank"
@@ -762,12 +762,12 @@ export default function MultitudesBento() {
                   >
                     SoundCloud
                   </a>
-                  .
-                  Tap a row to open a 30-second sample under that track, tap again to close it, and use{" "}
+                  — sunrise-to-midnight always something to match the mood.
+                  Sample the vibe here: tap a row for a 30-second teaser, tap again to fold it shut. Ready for the whole track? {" "}
                   <span className="font-mono text-[10px]" aria-hidden>
                     ↗
                   </span>{" "}
-                  on the edge to open the full track on SoundCloud.
+                  on the edge opens it on SoundCloud.
                 </p>
               </div>
               <div className="mt-6 lg:col-span-8 lg:mt-0">

@@ -3,6 +3,9 @@
 import { useEffect, useRef } from "react";
 import { Reveal } from "./Reveal";
 
+/** Faster flyover pacing (1 = realtime). Most browsers accept ~0.25–4. */
+const FLYOVER_PLAYBACK_RATE = 1.65;
+
 export default function Hero() {
   const videoRef = useRef<HTMLVideoElement | null>(null);
 
@@ -11,6 +14,7 @@ export default function Hero() {
     if (!video) return;
 
     const syncPlayback = () => {
+      video.playbackRate = FLYOVER_PLAYBACK_RATE;
       void video.play().catch(() => {});
     };
 

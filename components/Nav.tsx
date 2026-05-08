@@ -2,7 +2,6 @@
 
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useState } from "react";
-import SoundscapeToggle from "./SoundscapeToggle";
 
 const links = [
   { href: "#about", label: "About" },
@@ -51,7 +50,6 @@ export default function Nav() {
                 {link.label}
               </a>
             ))}
-            <SoundscapeToggle />
           </div>
 
           <button
@@ -87,7 +85,6 @@ export default function Nav() {
               {link.label}
             </motion.a>
           ))}
-          <SoundscapeToggle />
         </motion.div>
       )}
     </>

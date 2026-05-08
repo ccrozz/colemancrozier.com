@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
 import { Reveal } from "./Reveal";
@@ -50,12 +51,29 @@ export default function EcosystemTimeline() {
   return (
     <section id="about" className="bg-[var(--color-deep-sea)] py-24">
       <div className="section-wrap">
-        <Reveal>
-          <p className="eyebrow">The Ecosystem</p>
-          <h2 className="font-heading text-5xl text-[var(--color-shell)]">Interactive Resume</h2>
-        </Reveal>
+        <div className="flex flex-col gap-8 md:flex-row md:items-end md:justify-between md:gap-10 lg:gap-12">
+          <Reveal className="max-w-xl">
+            <p className="eyebrow">The Ecosystem</p>
+            <h2 className="font-heading text-5xl text-[var(--color-shell)]">Resume</h2>
+            <p className="mt-3 text-sm leading-relaxed text-[color:color-mix(in_srgb,var(--color-sand)_82%,white)]">
+              Field work, graduate study, and builds — one thread below.
+            </p>
+          </Reveal>
+          <Reveal delay={0.06} className="shrink-0 md:pb-1">
+            <div className="relative mx-auto aspect-[3/4] w-44 overflow-hidden rounded-xl border border-[color:color-mix(in_srgb,var(--color-sand)_24%,transparent)] shadow-[0_18px_50px_-24px_rgba(0,0,0,0.55)] sm:w-52 md:mx-0 md:w-56 lg:w-[15rem]">
+              <Image
+                src="/images/coleman-headshot.png"
+                alt="Coleman Crozier"
+                fill
+                sizes="(max-width: 768px) 176px, 240px"
+                className="object-cover object-[center_12%]"
+                priority
+              />
+            </div>
+          </Reveal>
+        </div>
 
-        <div ref={ref} className="relative mt-10">
+        <div ref={ref} className="relative mt-10 md:mt-12">
           <svg className="absolute left-[18px] top-2 hidden h-[calc(100%-1rem)] w-8 md:block" viewBox="0 0 32 900" fill="none">
             <motion.path
               d="M16 8 C16 200 16 350 16 890"

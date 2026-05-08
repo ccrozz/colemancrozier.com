@@ -38,7 +38,7 @@ const entries = [
     title: "University of Florida",
     role: "B.S. Food and Resource Economics · Defensive Back",
     detail:
-      "Concentration: Food & Agribusiness Marketing and Management · GPA 3.21 · SEC Academic Honor Roll (2020, 2021, 2022). Balanced 40+ hours per week of team obligations with coursework; earned playing time by junior season; routinely helped train younger DBs on technique and assignments.",
+      "Currently studying for a Master’s in Agronomy with a concentration in Agroecology. B.S. concentration: Food & Agribusiness Marketing and Management · GPA 3.21 · SEC Academic Honor Roll (2020, 2021, 2022). Balanced 40+ hours per week of team obligations with coursework; earned playing time by junior season; routinely helped train younger DBs on technique and assignments.",
   },
 ];
 

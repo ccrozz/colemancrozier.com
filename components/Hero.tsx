@@ -5,7 +5,6 @@ import { Reveal } from "./Reveal";
 
 export default function Hero() {
   const videoRef = useRef<HTMLVideoElement | null>(null);
-  const driveFlyoverUrl = "https://drive.google.com/uc?export=download&id=1N2V_N7oRnP0pKBvxukYDjmrUUgCQonAz";
 
   useEffect(() => {
     const video = videoRef.current;
@@ -32,8 +31,8 @@ export default function Hero() {
         playsInline
         preload="auto"
       >
-        <source src={driveFlyoverUrl} type="video/quicktime" />
         <source src="/videos/old-florida-flyover.mp4" type="video/mp4" />
+        <source src="/videos/old-florida-flyover.mov" type="video/quicktime" />
       </video>
       <div className="absolute inset-0 bg-[linear-gradient(120deg,rgba(9,20,28,0.82)_8%,rgba(9,20,28,0.56)_48%,rgba(9,20,28,0.8)_100%)]" />
       <div className="grain-overlay" />

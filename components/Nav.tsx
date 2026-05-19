@@ -72,6 +72,14 @@ export default function Nav() {
           exit={{ opacity: 0 }}
           className="fixed inset-0 z-50 flex flex-col items-center justify-center gap-8 bg-[var(--color-moss)] md:hidden"
         >
+          <button
+            type="button"
+            className="absolute right-4 top-4 flex h-11 w-11 items-center justify-center rounded-full border border-[color:color-mix(in_srgb,var(--color-shell)_35%,transparent)] text-3xl font-light leading-none text-[var(--color-shell)] transition hover:bg-[color:color-mix(in_srgb,var(--color-shell)_12%,transparent)]"
+            aria-label="Close menu"
+            onClick={() => setOpen(false)}
+          >
+            <span aria-hidden>×</span>
+          </button>
           {links.map((link, i) => (
             <motion.a
               key={link.href}

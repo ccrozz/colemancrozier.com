@@ -323,6 +323,19 @@ function shuffledCopy<T>(items: readonly T[]): T[] {
   return a;
 }
 
+function LightboxCloseButton({ onClose }: { onClose: () => void }) {
+  return (
+    <button
+      type="button"
+      className="absolute right-3 top-3 z-[2] flex h-11 w-11 items-center justify-center rounded-full border border-white/25 bg-white/10 text-2xl font-light leading-none text-white backdrop-blur-sm transition hover:bg-white/20 sm:hidden"
+      aria-label="Close"
+      onClick={onClose}
+    >
+      <span aria-hidden>×</span>
+    </button>
+  );
+}
+
 const soundcloudProfile = "https://soundcloud.com/colecrozier";
 
 type SoundPlaylist = {
@@ -1018,6 +1031,7 @@ export default function MultitudesBento() {
               aria-label="Close photo"
               onClick={() => setKitchenLightboxIndex(null)}
             />
+            <LightboxCloseButton onClose={() => setKitchenLightboxIndex(null)} />
             <div className="relative flex h-full w-full items-center justify-center p-3 sm:p-8">
               <div className="relative z-[1] flex w-full max-w-5xl flex-col items-center gap-4">
                 <div className="flex w-full items-center justify-between gap-4 text-white/90">
@@ -1026,7 +1040,7 @@ export default function MultitudesBento() {
                   </span>
                   <button
                     type="button"
-                    className="rounded-full border border-white/25 bg-white/10 px-3 py-1.5 text-xs font-medium text-white backdrop-blur-sm transition hover:bg-white/20"
+                    className="hidden rounded-full border border-white/25 bg-white/10 px-3 py-1.5 text-xs font-medium text-white backdrop-blur-sm transition hover:bg-white/20 sm:inline-flex"
                     onClick={() => setKitchenLightboxIndex(null)}
                   >
                     Close
@@ -1093,6 +1107,7 @@ export default function MultitudesBento() {
               aria-label="Close photo"
               onClick={() => setGarageLightboxIndex(null)}
             />
+            <LightboxCloseButton onClose={() => setGarageLightboxIndex(null)} />
             <div className="relative flex h-full w-full items-center justify-center p-3 sm:p-8">
               <div className="relative z-[1] flex w-full max-w-5xl flex-col items-center gap-4">
                 <div className="flex w-full items-center justify-between gap-4 text-white/90">
@@ -1101,7 +1116,7 @@ export default function MultitudesBento() {
                   </span>
                   <button
                     type="button"
-                    className="rounded-full border border-white/25 bg-white/10 px-3 py-1.5 text-xs font-medium text-white backdrop-blur-sm transition hover:bg-white/20"
+                    className="hidden rounded-full border border-white/25 bg-white/10 px-3 py-1.5 text-xs font-medium text-white backdrop-blur-sm transition hover:bg-white/20 sm:inline-flex"
                     onClick={() => setGarageLightboxIndex(null)}
                   >
                     Close
@@ -1168,6 +1183,7 @@ export default function MultitudesBento() {
               aria-label="Close photo"
               onClick={() => setWaterfrontLightboxIndex(null)}
             />
+            <LightboxCloseButton onClose={() => setWaterfrontLightboxIndex(null)} />
             <div className="relative flex h-full w-full items-center justify-center p-3 sm:p-8">
               <div className="relative z-[1] flex w-full max-w-5xl flex-col items-center gap-4">
                 <div className="flex w-full items-center justify-between gap-4 text-white/90">
@@ -1176,7 +1192,7 @@ export default function MultitudesBento() {
                   </span>
                   <button
                     type="button"
-                    className="rounded-full border border-white/25 bg-white/10 px-3 py-1.5 text-xs font-medium text-white backdrop-blur-sm transition hover:bg-white/20"
+                    className="hidden rounded-full border border-white/25 bg-white/10 px-3 py-1.5 text-xs font-medium text-white backdrop-blur-sm transition hover:bg-white/20 sm:inline-flex"
                     onClick={() => setWaterfrontLightboxIndex(null)}
                   >
                     Close
@@ -1247,6 +1263,7 @@ export default function MultitudesBento() {
               aria-label="Close photo"
               onClick={() => setGardenLightboxIndex(null)}
             />
+            <LightboxCloseButton onClose={() => setGardenLightboxIndex(null)} />
             <div className="relative flex h-full w-full items-center justify-center p-3 sm:p-8">
               <div className="relative z-[1] flex w-full max-w-5xl flex-col items-center gap-4">
                 <div className="flex w-full items-center justify-between gap-4 text-white/90">
@@ -1255,7 +1272,7 @@ export default function MultitudesBento() {
                   </span>
                   <button
                     type="button"
-                    className="rounded-full border border-white/25 bg-white/10 px-3 py-1.5 text-xs font-medium text-white backdrop-blur-sm transition hover:bg-white/20"
+                    className="hidden rounded-full border border-white/25 bg-white/10 px-3 py-1.5 text-xs font-medium text-white backdrop-blur-sm transition hover:bg-white/20 sm:inline-flex"
                     onClick={() => setGardenLightboxIndex(null)}
                   >
                     Close

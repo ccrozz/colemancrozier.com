@@ -7,33 +7,83 @@ import { Reveal } from "./Reveal";
 const FLYOVER_PLAYBACK_RATE = 1.65;
 
 export default function Hero() {
+  const sectionRef = useRef<HTMLElement | null>(null);
   const videoRef = useRef<HTMLVideoElement | null>(null);
 
   useEffect(() => {
     const video = videoRef.current;
+    const section = sectionRef.current;
     if (!video) return;
 
-    const syncPlayback = () => {
+    video.muted = true;
+    video.defaultMuted = true;
+    video.playsInline = true;
+    video.setAttribute("playsinline", "");
+    video.setAttribute("webkit-playsinline", "");
+
+    const tryPlay = () => {
       video.playbackRate = FLYOVER_PLAYBACK_RATE;
-      void video.play().catch(() => {});
+      return video.play().catch(() => undefined);
     };
 
-    syncPlayback();
-    video.addEventListener("loadeddata", syncPlayback);
-    return () => video.removeEventListener("loadeddata", syncPlayback);
+    const onMediaReady = () => {
+      void tryPlay();
+    };
+
+    const mediaEvents = ["loadedmetadata", "loadeddata", "canplay", "canplaythrough"] as const;
+    mediaEvents.forEach((event) => video.addEventListener(event, onMediaReady));
+
+    void tryPlay();
+
+    const onVisibility = () => {
+      if (document.visibilityState === "visible" && video.paused) {
+        void tryPlay();
+      }
+    };
+    document.addEventListener("visibilitychange", onVisibility);
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry?.isIntersecting && video.paused) {
+          void tryPlay();
+        }
+      },
+      { threshold: 0.15 },
+    );
+    observer.observe(video);
+
+    const unlockFromGesture = () => {
+      void tryPlay();
+    };
+    section?.addEventListener("touchstart", unlockFromGesture, { passive: true });
+    section?.addEventListener("click", unlockFromGesture);
+
+    return () => {
+      mediaEvents.forEach((event) => video.removeEventListener(event, onMediaReady));
+      document.removeEventListener("visibilitychange", onVisibility);
+      section?.removeEventListener("touchstart", unlockFromGesture);
+      section?.removeEventListener("click", unlockFromGesture);
+      observer.disconnect();
+    };
   }, []);
 
   return (
-    <section id="home" className="relative min-h-screen overflow-hidden bg-[var(--color-deep-sea)]">
+    <section
+      ref={sectionRef}
+      id="home"
+      className="relative min-h-[100dvh] overflow-hidden bg-[var(--color-deep-sea)]"
+    >
       <video
         ref={videoRef}
-        className="absolute inset-0 h-full w-full object-cover"
+        className="hero-video pointer-events-none absolute inset-0 h-full w-full object-cover"
         poster="/videos/old-florida-flyover-poster.jpg"
         autoPlay
         loop
         muted
         playsInline
         preload="auto"
+        disablePictureInPicture
+        disableRemotePlayback
       >
         <source src="/videos/old-florida-flyover.mp4" type="video/mp4" />
         <source src="/videos/old-florida-flyover.mov" type="video/quicktime" />

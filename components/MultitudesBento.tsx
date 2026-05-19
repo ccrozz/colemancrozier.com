@@ -371,16 +371,16 @@ function playlistSlugFromHref(href: string): string | null {
 /** Public playlists — https://soundcloud.com/colecrozier/sets */
 const soundcloudPlaylists: readonly SoundPlaylist[] = [
   {
-    title: "Drift Theory",
-    href: `${soundcloudProfile}/sets/i-went-to-horny-jail`,
+    title: "Night Rider",
+    href: `${soundcloudProfile}/sets/night-rider`,
   },
   {
     title: "Cold Start",
     href: `${soundcloudProfile}/sets/never-be-the-same`,
   },
   {
-    title: "Night Rider",
-    href: `${soundcloudProfile}/sets/night-rider`,
+    title: "Drift Theory",
+    href: `${soundcloudProfile}/sets/i-went-to-horny-jail`,
   },
   {
     title: "Iron & Velvet",

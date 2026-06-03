@@ -73,6 +73,15 @@ const websites: readonly WorkshopWebsite[] = [
     previewUrl: "https://parkviewadvance.com/",
     href: "https://parkviewadvance.com/",
   },
+  {
+    title: "NTR LVR",
+    tag: "Food forest designer · FL, TN, CT",
+    chips: ["Regional catalogs", "Hardiness zones", "Drag-and-place layout", "Plan export"],
+    description:
+      "Climate-aware food forest planner — pick a state, set your zone via ZIP or shortcuts, place plants by layer, and export a curated planting plan in minutes.",
+    previewUrl: "https://ntrlvr.vercel.app/",
+    href: "https://ntrlvr.vercel.app/",
+  },
 ];
 
 /** Continuous horizontal drift speed (pixels per second). */

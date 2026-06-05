@@ -61,8 +61,8 @@ const websites: readonly WorkshopWebsite[] = [
     chips: ["Sustainable tours", "Bookings funnel", "Nature-first copy", "Expert guides"],
     description:
       "Immersive Nosara eco-adventure brand: sustainable tour positioning, biodiversity narrative, and streamlined explore / book paths aligned with responsible travel.",
-    previewUrl: "https://ecogreen-six.vercel.app/",
-    href: "https://ecogreen-six.vercel.app/",
+    previewUrl: "https://ecogreennosara.com/",
+    href: "https://ecogreennosara.com/",
   },
   {
     title: "Parkview Advance",
@@ -79,8 +79,8 @@ const websites: readonly WorkshopWebsite[] = [
     chips: ["Regional catalogs", "Hardiness zones", "Drag-and-place layout", "Plan export"],
     description:
       "Climate-aware food forest planner — pick a state, set your zone via ZIP or shortcuts, place plants by layer, and export a curated planting plan in minutes.",
-    previewUrl: "https://ntrlvr.vercel.app/",
-    href: "https://ntrlvr.vercel.app/",
+    previewUrl: "https://ntrlvr.com/",
+    href: "https://ntrlvr.com/",
   },
 ];
 

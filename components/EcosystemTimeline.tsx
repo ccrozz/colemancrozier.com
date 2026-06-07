@@ -11,7 +11,7 @@ const entries = [
     title: "Evergreen Solutions FL",
     role: "Founder & CEO",
     detail:
-      "Leading ecological restoration work across Florida with a field-first approach: native restoration, land management, species assessment, habitat consulting, and invasive species management focused on measurable habitat outcomes.",
+      "Leading ecological restoration across Florida with a field-first approach: native restoration, land management, species assessment, habitat consulting, and invasive species management focused on measurable habitat outcomes. Built NTR LVR (ntrlvr.com) — a climate-aware garden planner for food forests, kitchen gardens, pollinator beds, flower borders, and ornamental layouts, with regional catalogs for Florida, Tennessee, and Connecticut; ZIP and hardiness-zone plant matching, Build For Me and hand-pick flows, drag-and-place beds with companions and side profile, and a pipeline from exported plans to Evergreen pro installs.",
   },
   {
     date: "Present",

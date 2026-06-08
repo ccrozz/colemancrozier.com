@@ -18,14 +18,14 @@ const entries = [
     title: "Gray Bay Solutions",
     role: "Co-Founder / Full-Stack Developer",
     detail:
-      "Builds web presence and AI-powered tools for local Florida businesses with Next.js, Vercel, Cursor, Tailwind, and Supabase.",
+      "Works with all kinds of businesses — mom-and-pop shops up through brokerages and everything in between. Build what keeps the lights on: landing pages, CRM and email follow-up, Stripe/Square/Plaid payments, booking flows, web and mobile apps, and AI when it actually saves time.",
   },
   {
     date: "Present",
     title: "Parkview Advance Financial Services",
     role: "Funding Specialist",
     detail:
-      "Detailed records across 30+ active client files, compliance tracking end to end; coordination across internal teams under competing deadlines; Excel pipeline monitoring that surfaces what needs action; clear translation of regulatory requirements for clients.",
+      "Helps businessowners figure out what they actually need, whether that’s SBA, equipment financing, a line of credit, asset-based lending, or receivables funding, then walk them through the application with our lender partners. Day to day: 30+ active files, compliance paperwork, pipeline tracking in Excel, and turning lender jargon into plain English.",
   },
   {
     date: "June 2022 – June 2023",

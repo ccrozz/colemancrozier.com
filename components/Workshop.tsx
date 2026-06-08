@@ -82,6 +82,15 @@ const websites: readonly WorkshopWebsite[] = [
     previewUrl: "https://ntrlvr.com/",
     href: "https://ntrlvr.com/",
   },
+  {
+    title: "Humble Bee",
+    tag: "Protein ice cream · DTC e-commerce",
+    chips: ["Clean-label formula", "Regenerative dairy", "Flavor storytelling", "Join the Hive"],
+    description:
+      "High-protein ice cream brand site — 30–40g per pint, raw honey and maple sweetening, zero gums or sugar alcohols. Three-flavor shop, ingredient transparency, clean-label comparison table, and founder story for the twin-built Florida brand.",
+    previewUrl: "https://humblebee-green.vercel.app/",
+    href: "https://humblebee-green.vercel.app/",
+  },
 ];
 
 /** Continuous horizontal drift speed (pixels per second). */

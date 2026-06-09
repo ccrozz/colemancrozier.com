@@ -15,6 +15,15 @@ type WorkshopWebsite = {
 /** Live sites — add entries here; `previewUrl` loads inside the scroll area. */
 const websites: readonly WorkshopWebsite[] = [
   {
+    title: "NTR LVR",
+    tag: "Food forest designer · FL, TN, CT",
+    chips: ["Regional catalogs", "Hardiness zones", "Drag-and-place layout", "Plan export"],
+    description:
+      "Climate-aware food forest planner — pick a state, set your zone via ZIP or shortcuts, place plants by layer, and export a curated planting plan in minutes.",
+    previewUrl: "https://ntrlvr.com/",
+    href: "https://ntrlvr.com/",
+  },
+  {
     title: "Evergreen Solutions FL",
     tag: "Founder & CEO · Ecological restoration",
     chips: [
@@ -72,15 +81,6 @@ const websites: readonly WorkshopWebsite[] = [
       "Lead-generation and education site for America’s small-business credit stack — products, Parkview advantage story, client proof, and multiple apply / inquire funnels.",
     previewUrl: "https://parkviewadvance.com/",
     href: "https://parkviewadvance.com/",
-  },
-  {
-    title: "NTR LVR",
-    tag: "Food forest designer · FL, TN, CT",
-    chips: ["Regional catalogs", "Hardiness zones", "Drag-and-place layout", "Plan export"],
-    description:
-      "Climate-aware food forest planner — pick a state, set your zone via ZIP or shortcuts, place plants by layer, and export a curated planting plan in minutes.",
-    previewUrl: "https://ntrlvr.com/",
-    href: "https://ntrlvr.com/",
   },
   {
     title: "Humble Bee",

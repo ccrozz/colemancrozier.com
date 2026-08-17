@@ -39,7 +39,7 @@ const entries = [
     title: "University of Florida",
     role: "B.S. Food and Resource Economics · Defensive Back",
     detail:
-      "Currently studying for a Master’s in Agronomy with a concentration in Agroecology. B.S. concentration: Food & Agribusiness Marketing and Management · GPA 3.21 · SEC Academic Honor Roll (2020, 2021, 2022).",
+      "Four-year letterman as a defensive back for the Florida Gators (2018–2022). B.S. concentration: Food & Agribusiness Marketing and Management · GPA 3.21 · SEC Academic Honor Roll (2020, 2021, 2022).",
   },
 ];
 
@@ -56,7 +56,7 @@ export default function EcosystemTimeline() {
             <p className="eyebrow">The Ecosystem</p>
             <h2 className="font-heading text-5xl text-[var(--color-shell)]">Resume</h2>
             <p className="mt-3 text-sm leading-relaxed text-[color:color-mix(in_srgb,var(--color-sand)_82%,white)]">
-              Field work, graduate study, and builds — one thread below.
+              Field work and builds — one thread below.
             </p>
           </Reveal>
           <Reveal delay={0.06} className="shrink-0 md:pb-1">

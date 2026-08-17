@@ -47,6 +47,15 @@ const websites: readonly WorkshopWebsite[] = [
     href: "https://www.pureassetgrp.com/",
   },
   {
+    title: "Cashflow Verdict",
+    tag: "MCA underwriting · Statement intelligence",
+    chips: ["Paper grade", "Revenue scrub", "MCA stacking", "Bank PDF ingest"],
+    description:
+      "Drop bank statements, get underwriting verdicts in minutes — revenue, stack, and paper grade without another spreadsheet. Built for MCA brokers, funders, ISOs, and lenders.",
+    previewUrl: "https://cashflowverdict.com/",
+    href: "https://cashflowverdict.com/",
+  },
+  {
     title: "Nice'n Tight Sportfishing",
     tag: "Costa Rica charter fleet · Playa Garza, Nosara",
     chips: ["Offshore charters", "Inshore roosterfish", "Bookings funnel"],

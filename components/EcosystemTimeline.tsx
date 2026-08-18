@@ -16,9 +16,16 @@ const entries = [
   {
     date: "Present",
     title: "Gray Bay Solutions",
-    role: "Co-Founder / Full-Stack Developer",
+    role: "Co-Founder / Tech Lead",
     detail:
-      "Works with all kinds of businesses — mom-and-pop shops up through brokerages and everything in between. Build what keeps the lights on: landing pages, CRM and email follow-up, Stripe/Square/Plaid payments, booking flows, web and mobile apps, and AI when it actually saves time.",
+      "Own the technical direction for a portfolio of 8+ client builds spanning web apps, payments, CRM, and AI tooling — shipping on time for $250K+ in combined project value. Translate vague business goals into clear product architecture, then lead engineers and analysts from discovery through launch. Stay close to 20+ stakeholders so delivery stays sharp, risks get cut early, and every handoff leaves the client with something they can actually run.",
+  },
+  {
+    date: "Present",
+    title: "Cashflow Verdict",
+    role: "Co-Founder",
+    detail:
+      "Built Cashflow Verdict (cashflowverdict.com) — statement intelligence for MCA underwriting. Brokers, funders, ISOs, and lenders drop bank or credit-union PDFs and get paper grade, revenue scrub, stacking, holdback, and recurring-debit flags in minutes, without another spreadsheet.",
   },
   {
     date: "Present",

@@ -832,29 +832,31 @@ export default function MultitudesBento() {
               eyebrow="Mechanics · Build Log"
               body="I drive a 2004 6.0L Power Stroke and love digging into how it works—reading, tinkering, and turning wrenches on it whenever I can find the time."
             >
-              <div className="mt-4 grid grid-cols-2 gap-2 sm:gap-2.5">
-                {garageImages.map((shot, index) => (
-                  <button
-                    key={shot.src}
-                    type="button"
-                    onClick={() => {
-                      setGarageLightboxIndex(index);
-                      setKitchenLightboxIndex(null);
-                      setWaterfrontLightboxIndex(null);
-                      setGardenLightboxIndex(null);
-                    }}
-                    className="group relative aspect-[4/5] overflow-hidden rounded-lg border border-[color:color-mix(in_srgb,var(--color-sand)_25%,transparent)] text-left outline-none ring-[var(--color-lagoon)] transition hover:border-[color:color-mix(in_srgb,var(--color-lagoon)_45%,var(--color-sand))] focus-visible:ring-2"
-                    aria-label={`Open photo: ${shot.alt}`}
-                  >
-                    <Image
-                      src={shot.src}
-                      alt=""
-                      fill
-                      sizes="(max-width: 640px) 45vw, 220px"
-                      className="object-cover transition duration-300 group-hover:scale-[1.03]"
-                    />
-                  </button>
-                ))}
+              <div className="mt-4 max-h-[min(48vh,420px)] min-h-[160px] overflow-y-auto overscroll-contain [scrollbar-gutter:stable]">
+                <div className="grid grid-cols-3 gap-2 sm:grid-cols-4 sm:gap-2.5">
+                  {garageImages.map((shot, index) => (
+                    <button
+                      key={shot.src}
+                      type="button"
+                      onClick={() => {
+                        setGarageLightboxIndex(index);
+                        setKitchenLightboxIndex(null);
+                        setWaterfrontLightboxIndex(null);
+                        setGardenLightboxIndex(null);
+                      }}
+                      className="group relative aspect-square overflow-hidden rounded-lg border border-[color:color-mix(in_srgb,var(--color-sand)_25%,transparent)] text-left outline-none ring-[var(--color-lagoon)] transition hover:border-[color:color-mix(in_srgb,var(--color-lagoon)_45%,var(--color-sand))] focus-visible:ring-2"
+                      aria-label={`Open photo: ${shot.alt}`}
+                    >
+                      <Image
+                        src={shot.src}
+                        alt=""
+                        fill
+                        sizes="(max-width: 640px) 30vw, (max-width: 1024px) 22vw, 140px"
+                        className="object-cover transition duration-300 group-hover:scale-[1.04]"
+                      />
+                    </button>
+                  ))}
+                </div>
               </div>
             </BentoCard>
           </Reveal>

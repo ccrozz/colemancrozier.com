@@ -246,6 +246,18 @@ const garageImages: readonly { src: string; alt: string }[] = [
   { src: "/images/garage/garage-02.png", alt: "Lifted black Toyota Tacoma TRD — aftermarket bumper, wheels, golden-hour light." },
   { src: "/images/garage/garage-03.png", alt: "Lifted white Ford F-250 Super Duty at dusk — black wheels, palm-lined street." },
   { src: "/images/garage/garage-04.png", alt: "Lifted white Ford pickup towing a fishing boat — rods upright, golden-hour light." },
+  { src: "/images/garage/garage-05.jpg", alt: "Lifted white OBS Ford F-250 with chrome deep-dish wheels and low-profile all-terrain tires." },
+  { src: "/images/garage/garage-06.jpg", alt: "Lifted black extended-cab Ford F-150 with gray cladding and beadlock-style off-road wheels." },
+  { src: "/images/garage/garage-07.jpg", alt: "Two-tone lifted Ford Super Duty FX4 on a lift in a Ben Pearson shop with parts racks behind." },
+  { src: "/images/garage/garage-08.jpg", alt: "Pair of red Porsche-Diesel Junior tractors on display in a classic car museum showroom." },
+  { src: "/images/garage/garage-09.jpg", alt: "Red C2 Corvette Sting Ray with side-exit exhaust parked beside a gray mid-engine C8 Corvette." },
+  { src: "/images/garage/garage-10.jpg", alt: "1959 Chevrolet Apache Fleetside in light blue and cream inside a collector car museum." },
+  { src: "/images/garage/garage-11.jpg", alt: "327 Turbo-Fire small-block V8 with orange valve covers and chrome air cleaner in a white engine bay." },
+  { src: "/images/garage/garage-12.jpg", alt: "Blue Honda Pioneer 1000 UTV with two yellow Labs riding on a stamped concrete driveway." },
+  { src: "/images/garage/garage-13.jpg", alt: "Yellow Corvette 427 Turbo-Jet engine bay with triangular chrome air cleaner and orange valve covers." },
+  { src: "/images/garage/garage-14.jpg", alt: "Red Corvette engine bay mid-restoration — manual, inspection sheet, and flashlight on the fenders." },
+  { src: "/images/garage/garage-15.jpg", alt: "Blue Chevrolet V8 on a silver custom chassis build with polished intake and serpentine belt setup." },
+  { src: "/images/garage/garage-16.jpg", alt: "Black Corvette small-block with Rochester fuel injection and ribbed aluminum valve covers." },
 ];
 
 /** Stills from the lagoon, inlet, and beach — paths match `/public/images/waterfront/waterfront-NN.png` (copy order). */

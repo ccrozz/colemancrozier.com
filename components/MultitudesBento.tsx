@@ -201,51 +201,51 @@ const lensImages: readonly LensImage[] = [
 ];
 
 const kitchenImages: readonly { src: string; alt: string }[] = [
-  { src: "/images/kitchen/kitchen-01.png", alt: "Tuna carpaccio — avocado ring, red onion, capers on a glass stovetop." },
-  { src: "/images/kitchen/kitchen-02.png", alt: "Carbonara with pancetta and Parmesan — mixed green salad on the side." },
-  { src: "/images/kitchen/kitchen-03.png", alt: "Pancake breakfast — scrambled eggs and four link sausages on a square plate." },
-  { src: "/images/kitchen/kitchen-04.png", alt: "Skillet jambalaya — chicken, smoked sausage, shrimp, peppers, scallions." },
+  { src: "/images/kitchen/kitchen-01.png", alt: "Tuna carpaccio: avocado ring, red onion, capers on a glass stovetop." },
+  { src: "/images/kitchen/kitchen-02.png", alt: "Carbonara with pancetta and Parmesan: mixed green salad on the side." },
+  { src: "/images/kitchen/kitchen-03.png", alt: "Pancake breakfast: scrambled eggs and four link sausages on a square plate." },
+  { src: "/images/kitchen/kitchen-04.png", alt: "Skillet jambalaya: chicken, smoked sausage, shrimp, peppers, scallions." },
   { src: "/images/kitchen/kitchen-05.png", alt: "Medium-rare steak slices with rosemary mashed potatoes and toasted baguette." },
-  { src: "/images/kitchen/kitchen-06.png", alt: "Grilled sandwich halves — melted cheese filling with a side of potato chips." },
+  { src: "/images/kitchen/kitchen-06.png", alt: "Grilled sandwich halves: melted cheese filling with a side of potato chips." },
   { src: "/images/kitchen/kitchen-07.png", alt: "Cheesy toast, sunny-side eggs, mandarin halves, and sausage on marble counter." },
   { src: "/images/kitchen/kitchen-08.png", alt: "Ground beef, herb rice, diced avocado, and pickled red onions on one plate." },
-  { src: "/images/kitchen/kitchen-09.png", alt: "Steak over fried rice — seared slices, eggy seasoned rice, herb flakes." },
-  { src: "/images/kitchen/kitchen-10.png", alt: "Sliced rib roast resting on a rack — pink centers, dark crust." },
-  { src: "/images/kitchen/kitchen-11.png", alt: "Homemade bagels — plain and herb-salt tops on a sheet pan." },
-  { src: "/images/kitchen/kitchen-12.png", alt: "Prime rib dinner — roast beef, green beans, scalloped potatoes, checkered cloth." },
+  { src: "/images/kitchen/kitchen-09.png", alt: "Steak over fried rice: seared slices, eggy seasoned rice, herb flakes." },
+  { src: "/images/kitchen/kitchen-10.png", alt: "Sliced rib roast resting on a rack: pink centers, dark crust." },
+  { src: "/images/kitchen/kitchen-11.png", alt: "Homemade bagels: plain and herb-salt tops on a sheet pan." },
+  { src: "/images/kitchen/kitchen-12.png", alt: "Prime rib dinner: roast beef, green beans, scalloped potatoes, checkered cloth." },
   { src: "/images/kitchen/kitchen-13.png", alt: "Whole roasted turkey on a rack in a roasting pan on the stove." },
-  { src: "/images/kitchen/kitchen-14.png", alt: "Carved turkey platter — breast slices, legs, rosemary, grapes." },
-  { src: "/images/kitchen/kitchen-15.png", alt: "Party starters — charcuterie board, tuna and avocado plates, guacamole." },
-  { src: "/images/kitchen/kitchen-16.png", alt: "Charcuterie — salami, prosciutto, cheeses, grapes, olives, foil-wrapped wedges." },
-  { src: "/images/kitchen/kitchen-17.png", alt: "Fish carpaccio — avocado center, capers, red onion, herbs on a red plate." },
-  { src: "/images/kitchen/kitchen-18.png", alt: "Lodge skillet — chicken thighs on caramelized onions, mushrooms, and rice." },
-  { src: "/images/kitchen/kitchen-19.png", alt: "Herb-crusted prime rib — slices on a juice-lined cutting board." },
-  { src: "/images/kitchen/kitchen-20.png", alt: "Seafood paella — shrimp, mussels, chorizo, peppers, peas; pineapple garnish." },
-  { src: "/images/kitchen/kitchen-21.png", alt: "Lasagna — layers of pasta, meat ragù, melted cheese." },
+  { src: "/images/kitchen/kitchen-14.png", alt: "Carved turkey platter: breast slices, legs, rosemary, grapes." },
+  { src: "/images/kitchen/kitchen-15.png", alt: "Party starters: charcuterie board, tuna and avocado plates, guacamole." },
+  { src: "/images/kitchen/kitchen-16.png", alt: "Charcuterie: salami, prosciutto, cheeses, grapes, olives, foil-wrapped wedges." },
+  { src: "/images/kitchen/kitchen-17.png", alt: "Fish carpaccio: avocado center, capers, red onion, herbs on a red plate." },
+  { src: "/images/kitchen/kitchen-18.png", alt: "Lodge skillet: chicken thighs on caramelized onions, mushrooms, and rice." },
+  { src: "/images/kitchen/kitchen-19.png", alt: "Herb-crusted prime rib: slices on a juice-lined cutting board." },
+  { src: "/images/kitchen/kitchen-20.png", alt: "Seafood paella: shrimp, mussels, chorizo, peppers, peas; pineapple garnish." },
+  { src: "/images/kitchen/kitchen-21.png", alt: "Lasagna: layers of pasta, meat ragù, melted cheese." },
   { src: "/images/kitchen/kitchen-22.png", alt: "Pan-seared chicken with mushroom gravy over skin-on mashed potatoes." },
-  { src: "/images/kitchen/kitchen-23.png", alt: "Everything bagel sandwich — fried egg, melted cheese, pastrami-style meat." },
-  { src: "/images/kitchen/kitchen-24.png", alt: "Chicken piccata — lemon-caper sauce, linguine, sautéed squash and beans." },
-  { src: "/images/kitchen/kitchen-25.png", alt: "Steak night spread — seared filets, butter shrimp skillet, mashed potatoes." },
+  { src: "/images/kitchen/kitchen-23.png", alt: "Everything bagel sandwich: fried egg, melted cheese, pastrami-style meat." },
+  { src: "/images/kitchen/kitchen-24.png", alt: "Chicken piccata: lemon-caper sauce, linguine, sautéed squash and beans." },
+  { src: "/images/kitchen/kitchen-25.png", alt: "Steak night spread: seared filets, butter shrimp skillet, mashed potatoes." },
   { src: "/images/kitchen/kitchen-26.png", alt: "Chocolate chip pancake cooking in a stainless skillet with bubbling butter." },
   { src: "/images/kitchen/kitchen-27.png", alt: "Heart-shaped red bell pepper held over boiling potatoes on the stove." },
-  { src: "/images/kitchen/kitchen-28.png", alt: "Burrito cross-section — guacamole, chicken, beans, and melted cheese in foil." },
-  { src: "/images/kitchen/kitchen-29.png", alt: "Surf-and-turf plate — lobster tail, steak, chicken, scalloped potatoes, corn salad." },
+  { src: "/images/kitchen/kitchen-28.png", alt: "Burrito cross-section: guacamole, chicken, beans, and melted cheese in foil." },
+  { src: "/images/kitchen/kitchen-29.png", alt: "Surf-and-turf plate: lobster tail, steak, chicken, scalloped potatoes, corn salad." },
   { src: "/images/kitchen/kitchen-30.png", alt: "Medium-rare steak slices piled on a white platter with navy rim." },
   { src: "/images/kitchen/kitchen-31.png", alt: "White fish ceviche with mango, red onion, and cilantro on a square plate." },
   { src: "/images/kitchen/kitchen-32.png", alt: "Lemon-topped white fish fillets on foil-lined baking sheets ready for the oven." },
   { src: "/images/kitchen/kitchen-33.png", alt: "Braised meat over rice with brown jus and grated cheese on a mosaic plate." },
-  { src: "/images/kitchen/kitchen-34.png", alt: "Seared tuna carpaccio — capers, red onion, guacamole tower, ponzu on speckled plate." },
+  { src: "/images/kitchen/kitchen-34.png", alt: "Seared tuna carpaccio: capers, red onion, guacamole tower, ponzu on speckled plate." },
   { src: "/images/kitchen/kitchen-35.png", alt: "Blackened fish tacos on purple corn tortillas with mango salsa and cilantro." },
-  { src: "/images/kitchen/kitchen-36.png", alt: "Hamachi crudo — thin raw slices with ponzu, cilantro, and jalapeño on white plate." },
+  { src: "/images/kitchen/kitchen-36.png", alt: "Hamachi crudo: thin raw slices with ponzu, cilantro, and jalapeño on white plate." },
   { src: "/images/kitchen/kitchen-37.png", alt: "Chunky mango ceviche with red onion and herbs on a floral ceramic platter." },
   { src: "/images/kitchen/kitchen-38.png", alt: "Pan-seared fish tacos with pico de gallo and green crema on checkered cloth." },
 ];
 
 const garageImages: readonly { src: string; alt: string }[] = [
-  { src: "/images/garage/garage-01.png", alt: "White Ford F-250 towing a center-console boat — sunset, grass paver lot." },
-  { src: "/images/garage/garage-02.png", alt: "Lifted black Toyota Tacoma TRD — aftermarket bumper, wheels, golden-hour light." },
-  { src: "/images/garage/garage-03.png", alt: "Lifted white Ford F-250 Super Duty at dusk — black wheels, palm-lined street." },
-  { src: "/images/garage/garage-04.png", alt: "Lifted white Ford pickup towing a fishing boat — rods upright, golden-hour light." },
+  { src: "/images/garage/garage-01.png", alt: "White Ford F-250 towing a center-console boat: sunset, grass paver lot." },
+  { src: "/images/garage/garage-02.png", alt: "Lifted black Toyota Tacoma TRD: aftermarket bumper, wheels, golden-hour light." },
+  { src: "/images/garage/garage-03.png", alt: "Lifted white Ford F-250 Super Duty at dusk: black wheels, palm-lined street." },
+  { src: "/images/garage/garage-04.png", alt: "Lifted white Ford pickup towing a fishing boat: rods upright, golden-hour light." },
   { src: "/images/garage/garage-05.jpg", alt: "Lifted white OBS Ford F-250 with chrome deep-dish wheels and low-profile all-terrain tires." },
   { src: "/images/garage/garage-06.jpg", alt: "Lifted black extended-cab Ford F-150 with gray cladding and beadlock-style off-road wheels." },
   { src: "/images/garage/garage-07.jpg", alt: "Two-tone lifted Ford Super Duty FX4 on a lift in a Ben Pearson shop with parts racks behind." },
@@ -255,12 +255,12 @@ const garageImages: readonly { src: string; alt: string }[] = [
   { src: "/images/garage/garage-11.jpg", alt: "327 Turbo-Fire small-block V8 with orange valve covers and chrome air cleaner in a white engine bay." },
   { src: "/images/garage/garage-12.jpg", alt: "Blue Honda Pioneer 1000 UTV with two yellow Labs riding on a stamped concrete driveway." },
   { src: "/images/garage/garage-13.jpg", alt: "Yellow Corvette 427 Turbo-Jet engine bay with triangular chrome air cleaner and orange valve covers." },
-  { src: "/images/garage/garage-14.jpg", alt: "Red Corvette engine bay mid-restoration — manual, inspection sheet, and flashlight on the fenders." },
+  { src: "/images/garage/garage-14.jpg", alt: "Red Corvette engine bay mid-restoration: manual, inspection sheet, and flashlight on the fenders." },
   { src: "/images/garage/garage-15.jpg", alt: "Blue Chevrolet V8 on a silver custom chassis build with polished intake and serpentine belt setup." },
   { src: "/images/garage/garage-16.jpg", alt: "Black Corvette small-block with Rochester fuel injection and ribbed aluminum valve covers." },
 ];
 
-/** Stills from the lagoon, inlet, and beach — paths match `/public/images/waterfront/waterfront-NN.png` (copy order). */
+/** Stills from the lagoon, inlet, and beach: paths match `/public/images/waterfront/waterfront-NN.png` (copy order). */
 const waterfrontImages: readonly { src: string; alt: string }[] = [
   { src: "/images/waterfront/waterfront-01.png", alt: "Silhouetted surfer on a longboard carving a backlit breaking wave at dawn or dusk" },
   { src: "/images/waterfront/waterfront-02.png", alt: "Surfer in a wetsuit crouched on a light board riding a large turquoise breaking wave" },
@@ -268,7 +268,7 @@ const waterfrontImages: readonly { src: string; alt: string }[] = [
   { src: "/images/waterfront/waterfront-04.png", alt: "Vertical shot of a surfer in a wetsuit riding a small green wave with foreground foam" },
   { src: "/images/waterfront/waterfront-05.png", alt: "Surfer in a black wetsuit standing on a white board on a peeling coastal wave" },
   { src: "/images/waterfront/waterfront-06.png", alt: "Wide view of a wetsuited surfer crouched on a white board across a green peeling wave" },
-  { src: "/images/waterfront/waterfront-07.png", alt: "Surfer in a dark wetsuit rides a breaking wave—another waits on a board offshore" },
+  { src: "/images/waterfront/waterfront-07.png", alt: "Surfer in a dark wetsuit rides a breaking wave. Another waits on a board offshore" },
   { src: "/images/waterfront/waterfront-08.png", alt: "Wetsuited surfer crouched on the green face of a wave ahead of breaking white foam" },
   { src: "/images/waterfront/waterfront-09.png", alt: "Surfer rides a breaking wave while a second paddler sits waiting on a board behind" },
   { src: "/images/waterfront/waterfront-10.png", alt: "Lone surfer in a dark wetsuit crouched on a white board riding a breaking ocean wave" },
@@ -279,15 +279,15 @@ const waterfrontImages: readonly { src: string; alt: string }[] = [
   { src: "/images/waterfront/waterfront-15.png", alt: "Man on a boat bow proudly holding a large jack crevalle against a coastal skyline" },
   { src: "/images/waterfront/waterfront-16.png", alt: "Shirtless angler holds a large black drum with mangroves and pale coastal trees behind" },
   { src: "/images/waterfront/waterfront-17.png", alt: "Boater holds a freshly caught snook with Florida mangroves and blue sky behind him" },
-  { src: "/images/waterfront/waterfront-18.png", alt: "Two wetsuited surfers on wet sand with boards—one flashes a shaka at the shoreline" },
+  { src: "/images/waterfront/waterfront-18.png", alt: "Two wetsuited surfers on wet sand with boards. One flashes a shaka at the shoreline" },
   { src: "/images/waterfront/waterfront-19.png", alt: "Man in a black Billabong wetsuit holding a Quiet Flight surfboard on a sandy beach" },
-  { src: "/images/waterfront/waterfront-20.png", alt: "Sunset wake ride behind a Yamaha 90 outboard—two towed riders on either side of the wake" },
+  { src: "/images/waterfront/waterfront-20.png", alt: "Sunset wake ride behind a Yamaha 90 outboard: two towed riders on either side of the wake" },
   { src: "/images/waterfront/waterfront-21.png", alt: "Boat wake at sunset toward a long bridge, with a green channel marker in the water" },
-  { src: "/images/waterfront/waterfront-22.png", alt: "From the helm at sunset—a chartplotter, T-top frame, and bow on calm reflective water" },
+  { src: "/images/waterfront/waterfront-22.png", alt: "From the helm at sunset: a chartplotter, T-top frame, and bow on calm reflective water" },
   { src: "/images/waterfront/waterfront-23.png", alt: "Fiery orange sunset over rippled coastal water with a silhouetted treeline on the horizon" },
-  { src: "/images/waterfront/waterfront-24.png", alt: "Man at the helm at sunset—compass glowing as orange sky reflects on calm coastal water" },
+  { src: "/images/waterfront/waterfront-24.png", alt: "Man at the helm at sunset, compass glowing as orange sky reflects on calm coastal water" },
   { src: "/images/waterfront/waterfront-25.png", alt: "Three men on a center console fishing boat on blue water off a coastal neighborhood" },
-  { src: "/images/waterfront/waterfront-26.png", alt: "Center console with blue deck LEDs moored at dusk—warm sunset glow on the horizon" },
+  { src: "/images/waterfront/waterfront-26.png", alt: "Center console with blue deck LEDs moored at dusk, warm sunset glow on the horizon" },
   { src: "/images/waterfront/waterfront-27.png", alt: "Headstand on a shell-strewn beach at golden hour as sunset light breaks through the clouds" },
   { src: "/images/waterfront/waterfront-28.png", alt: "Hogfish held up on a dock before the coastal skyline" },
   { src: "/images/waterfront/waterfront-29.png", alt: "Spearfisher displaying a hogfish in clear turquoise lagoon water" },
@@ -455,7 +455,7 @@ function playlistSlugFromHref(href: string): string | null {
   return m?.[1] ?? null;
 }
 
-/** Public playlists — https://soundcloud.com/colecrozier/sets */
+/** Public playlists: https://soundcloud.com/colecrozier/sets */
 const soundcloudPlaylists: readonly SoundPlaylist[] = [
   {
     title: "Night Rider",
@@ -489,7 +489,7 @@ function BentoCard({
   children?: React.ReactNode;
 }) {
   return (
-    <article className={`relative overflow-hidden rounded-xl border border-[color:color-mix(in_srgb,var(--color-sand)_20%,transparent)] bg-[var(--color-shell)] p-6 ${className}`}>
+    <article className={`relative overflow-visible rounded-xl border border-[color:color-mix(in_srgb,var(--color-sand)_20%,transparent)] bg-[var(--color-shell)] p-6 ${className}`}>
       <p className="eyebrow !text-[var(--color-deep-sea)]">{eyebrow}</p>
       <h3 className="mt-2 font-heading text-4xl text-[var(--color-ink)]">{title}</h3>
       <p className="mt-3 text-sm leading-relaxed text-[color:color-mix(in_srgb,var(--color-ink)_85%,transparent)]">{body}</p>
@@ -557,7 +557,7 @@ export default function MultitudesBento() {
     setMounted(true);
   }, []);
 
-  /** Random order only after hydration — `shuffledCopy` uses Math.random() and must not run during SSR. */
+  /** Random order only after hydration: `shuffledCopy` uses Math.random() and must not run during SSR. */
   useEffect(() => {
     setWaterfrontGallery(shuffledCopy(waterfrontImages));
     setGardenGallery(shuffledCopy(gardenImages));
@@ -690,13 +690,16 @@ export default function MultitudesBento() {
         <div className="mt-10 grid grid-cols-1 gap-5 lg:grid-cols-12 lg:gap-5">
           <Reveal className="lg:col-span-6">
             <BentoCard
-              className="flex min-h-0 flex-col bg-[linear-gradient(155deg,color-mix(in_srgb,var(--color-lagoon)_10%,var(--color-shell)),color-mix(in_srgb,var(--color-tide)_35%,var(--color-shell)))]"
+              className="bg-[linear-gradient(155deg,color-mix(in_srgb,var(--color-lagoon)_10%,var(--color-shell)),color-mix(in_srgb,var(--color-tide)_35%,var(--color-shell)))]"
               title="The Waterfront"
               eyebrow="Saltwater · Surf"
               body="The Indian River Lagoon and Sebastian Inlet are home base. Chasing redfish on spoil islands, reading tide charts, and paddling out when swell cooperates."
             >
-              <div className="mt-4 flex min-h-0 flex-col">
-                <div className="mb-2 flex shrink-0 items-center justify-end gap-2">
+              <div className="mt-4">
+                <div className="mb-2 flex items-center justify-between gap-2">
+                  <p className="font-mono text-[10px] uppercase tracking-[0.16em] text-[color:color-mix(in_srgb,var(--color-ink)_45%,transparent)]">
+                    {waterfrontImages.length} photos
+                  </p>
                   <button
                     type="button"
                     onClick={() => {
@@ -708,7 +711,7 @@ export default function MultitudesBento() {
                     Shuffle photos
                   </button>
                 </div>
-                <div className="max-h-[min(48vh,420px)] min-h-[160px] overflow-y-auto overscroll-contain [scrollbar-gutter:stable]">
+                <div className="h-[min(70vh,680px)] min-h-[28rem] overflow-y-auto overscroll-contain [scrollbar-gutter:stable]">
                   <div className="grid grid-cols-3 gap-2 sm:grid-cols-4 sm:gap-2.5">
                     {waterfrontGallery.map((shot, index) => (
                       <button
@@ -740,14 +743,17 @@ export default function MultitudesBento() {
 
           <Reveal className="lg:col-span-6">
             <BentoCard
-              className="flex min-h-0 flex-col"
+              className=""
               title="The Garden"
               eyebrow="Permaculture · Soil Health"
-              body="My agriculture degree is where a serious love of the natural world clicked into place. I get energy from building something with my hands, helping others grow their ideas, and stopping to admire careful work—especially when it celebrates native Florida."
+              body="My agriculture degree is where a serious love of the natural world clicked into place. I get energy from building something with my hands, helping others grow their ideas, and stopping to admire careful work, especially when it celebrates native Florida."
             >
               <p className="mt-4 font-mono text-xs text-[var(--color-moss)]">Native Florida · build · help · admire</p>
-              <div className="mt-4 flex min-h-0 flex-col">
-                <div className="mb-2 flex items-center justify-end gap-2">
+              <div className="mt-4">
+                <div className="mb-2 flex items-center justify-between gap-2">
+                  <p className="font-mono text-[10px] uppercase tracking-[0.16em] text-[color:color-mix(in_srgb,var(--color-ink)_45%,transparent)]">
+                    {gardenImages.length} photos
+                  </p>
                   <button
                     type="button"
                     onClick={() => {
@@ -759,7 +765,7 @@ export default function MultitudesBento() {
                     Shuffle photos
                   </button>
                 </div>
-                <div className="max-h-[min(48vh,420px)] min-h-[160px] overflow-y-auto overscroll-contain [scrollbar-gutter:stable]">
+                <div className="h-[min(70vh,680px)] min-h-[28rem] overflow-y-auto overscroll-contain [scrollbar-gutter:stable]">
                   <div className="grid grid-cols-3 gap-2 sm:grid-cols-4 sm:gap-2.5">
                     {gardenGallery.map((shot, index) => (
                       <button
@@ -794,9 +800,13 @@ export default function MultitudesBento() {
               className="bg-[linear-gradient(135deg,color-mix(in_srgb,var(--color-tide)_65%,transparent),var(--color-shell))]"
               title="The Kitchen"
               eyebrow="Culinary Science"
-              body="Snapshots from the table—good ingredients, sharp heat, and the kind of meal worth lingering over."
+              body="Snapshots from the table: good ingredients, sharp heat, and the kind of meal worth lingering over."
             >
-              <div className="mt-4 max-h-[min(48vh,420px)] overflow-y-auto overscroll-contain [scrollbar-gutter:stable]">
+              <div className="mt-4">
+                <p className="mb-2 font-mono text-[10px] uppercase tracking-[0.16em] text-[color:color-mix(in_srgb,var(--color-ink)_45%,transparent)]">
+                  {kitchenImages.length} photos
+                </p>
+                <div className="h-[min(70vh,680px)] min-h-[28rem] overflow-y-auto overscroll-contain [scrollbar-gutter:stable]">
                 <div className="grid grid-cols-3 gap-2 sm:grid-cols-4 sm:gap-2.5">
                   {kitchenImages.map((shot, index) => (
                     <button
@@ -821,6 +831,7 @@ export default function MultitudesBento() {
                     </button>
                   ))}
                 </div>
+                </div>
               </div>
             </BentoCard>
           </Reveal>
@@ -830,9 +841,13 @@ export default function MultitudesBento() {
               className=""
               title="The Garage"
               eyebrow="Mechanics · Build Log"
-              body="I drive a 2004 6.0L Power Stroke and love digging into how it works—reading, tinkering, and turning wrenches on it whenever I can find the time."
+              body="I drive a 2004 6.0L Power Stroke and love digging into how it works: reading, tinkering, and turning wrenches on it whenever I can find the time."
             >
-              <div className="mt-4 max-h-[min(48vh,420px)] min-h-[160px] overflow-y-auto overscroll-contain [scrollbar-gutter:stable]">
+              <div className="mt-4">
+                <p className="mb-2 font-mono text-[10px] uppercase tracking-[0.16em] text-[color:color-mix(in_srgb,var(--color-ink)_45%,transparent)]">
+                  {garageImages.length} photos
+                </p>
+                <div className="h-[min(70vh,680px)] min-h-[28rem] overflow-y-auto overscroll-contain [scrollbar-gutter:stable]">
                 <div className="grid grid-cols-3 gap-2 sm:grid-cols-4 sm:gap-2.5">
                   {garageImages.map((shot, index) => (
                     <button
@@ -856,6 +871,7 @@ export default function MultitudesBento() {
                       />
                     </button>
                   ))}
+                </div>
                 </div>
               </div>
             </BentoCard>
@@ -967,7 +983,7 @@ export default function MultitudesBento() {
                   >
                     SoundCloud
                   </a>
-                  — sunrise-to-midnight always something to match the mood.
+                  , sunrise to midnight, always something to match the mood.
                   Sample the vibe here: tap a row for a 30-second teaser, tap again to fold it shut. Ready for the whole track? {" "}
                   <span className="font-mono text-[10px]" aria-hidden>
                     ↗

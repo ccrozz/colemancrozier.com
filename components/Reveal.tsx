@@ -1,17 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { useInView } from "react-intersection-observer";
 import { ReactNode } from "react";
-
-const variants = {
-  hidden: { opacity: 0, y: 32 },
-  visible: {
-    opacity: 1,
-    y: 0,
-    transition: { duration: 0.7, ease: [0.16, 1, 0.3, 1] },
-  },
-};
 
 export function Reveal({
   children,
@@ -22,16 +12,13 @@ export function Reveal({
   delay?: number;
   className?: string;
 }) {
-  const [ref, inView] = useInView({ triggerOnce: true, threshold: 0.15 });
-
   return (
     <motion.div
-      ref={ref}
       className={className}
-      variants={variants}
-      initial="hidden"
-      animate={inView ? "visible" : "hidden"}
-      transition={{ delay }}
+      initial={{ opacity: 1, y: 16 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, amount: 0.01, margin: "120px 0px" }}
+      transition={{ duration: 0.55, delay, ease: [0.16, 1, 0.3, 1] }}
     >
       {children}
     </motion.div>

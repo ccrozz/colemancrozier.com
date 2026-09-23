@@ -12,14 +12,14 @@ type WorkshopWebsite = {
   href: string;
 };
 
-/** Live sites — add entries here; `previewUrl` loads inside the scroll area. */
+/** Live sites: add entries here; `previewUrl` loads inside the scroll area. */
 const websites: readonly WorkshopWebsite[] = [
   {
     title: "NTR LVR",
     tag: "Food forest designer · FL, TN, CT",
     chips: ["Regional catalogs", "Hardiness zones", "Drag-and-place layout", "Plan export"],
     description:
-      "Climate-aware food forest planner — pick a state, set your zone via ZIP or shortcuts, place plants by layer, and export a curated planting plan in minutes.",
+      "Climate-aware food forest planner: pick a state, set your zone via ZIP or shortcuts, place plants by layer, and export a curated planting plan in minutes.",
     previewUrl: "https://ntrlvr.com/",
     href: "https://ntrlvr.com/",
   },
@@ -42,7 +42,7 @@ const websites: readonly WorkshopWebsite[] = [
     tag: "Small & mid-market financing consultants",
     chips: ["Asset-backed loans", "Term financing", "RBF", "Lender placement"],
     description:
-      "Consulting-led brand presence for SMEs raising $50K–$5M+ — asset-backed, term, and revenue-based financing with clear funnel to apply and explore solutions.",
+      "Consulting-led brand presence for SMEs raising $50K–$5M+: asset-backed, term, and revenue-based financing with clear funnel to apply and explore solutions.",
     previewUrl: "https://www.pureassetgrp.com/",
     href: "https://www.pureassetgrp.com/",
   },
@@ -51,7 +51,7 @@ const websites: readonly WorkshopWebsite[] = [
     tag: "MCA underwriting · Statement intelligence",
     chips: ["Paper grade", "Revenue scrub", "MCA stacking", "Bank PDF ingest"],
     description:
-      "Drop bank statements, get underwriting verdicts in minutes — revenue, stack, and paper grade without another spreadsheet. Built for MCA brokers, funders, ISOs, and lenders.",
+      "Drop bank statements, get underwriting verdicts in minutes: revenue, stack, and paper grade without another spreadsheet. Built for MCA brokers, funders, ISOs, and lenders.",
     previewUrl: "https://cashflowverdict.com/",
     href: "https://cashflowverdict.com/",
   },
@@ -60,7 +60,7 @@ const websites: readonly WorkshopWebsite[] = [
     tag: "Costa Rica charter fleet · Playa Garza, Nosara",
     chips: ["Offshore charters", "Inshore roosterfish", "Bookings funnel"],
     description:
-      "Premier Nosara sportfishing site for Captain Eduardo — trip positioning, imagery, and a path to charter booking with an emphasis on offshore and inshore programs.",
+      "Premier Nosara sportfishing site for Captain Eduardo: trip positioning, imagery, and a path to charter booking with an emphasis on offshore and inshore programs.",
     previewUrl: "https://www.nicentightcr.com/",
     href: "https://www.nicentightcr.com/",
   },
@@ -69,7 +69,7 @@ const websites: readonly WorkshopWebsite[] = [
     tag: "Coffee roastery e-commerce · Satellite Beach, FL",
     chips: ["Next.js", "Small-batch SKUs", "Merch & markets", "Vercel"],
     description:
-      "Shop-forward roastery experience for fresh roasts out of Satellite Beach — product grids, roast notes, flip-card packaging detail, markets story, and clean CTAs.",
+      "Shop-forward roastery experience for fresh roasts out of Satellite Beach: product grids, roast notes, flip-card packaging detail, markets story, and clean CTAs.",
     previewUrl: "https://beachside-beans.vercel.app/",
     href: "https://beachside-beans.vercel.app/",
   },
@@ -87,7 +87,7 @@ const websites: readonly WorkshopWebsite[] = [
     tag: "SMB financing · Public platform",
     chips: ["SBA products", "Equipment financing", "Asset-based loans", "LOC & RBF"],
     description:
-      "Lead-generation and education site for America’s small-business credit stack — products, Parkview advantage story, client proof, and multiple apply / inquire funnels.",
+      "Lead-generation and education site for America’s small-business credit stack: products, Parkview advantage story, client proof, and multiple apply / inquire funnels.",
     previewUrl: "https://parkviewadvance.com/",
     href: "https://parkviewadvance.com/",
   },
@@ -96,7 +96,7 @@ const websites: readonly WorkshopWebsite[] = [
     tag: "Protein ice cream · DTC e-commerce",
     chips: ["Clean-label formula", "Regenerative dairy", "Flavor storytelling", "Join the Hive"],
     description:
-      "High-protein ice cream brand site — 30–40g per pint, raw honey and maple sweetening, zero gums or sugar alcohols. Three-flavor shop, ingredient transparency, clean-label comparison table, and founder story for the twin-built Florida brand.",
+      "High-protein ice cream brand site: 30–40g per pint, raw honey and maple sweetening, zero gums or sugar alcohols. Three-flavor shop, ingredient transparency, clean-label comparison table, and founder story for the twin-built Florida brand.",
     previewUrl: "https://humblebee-green.vercel.app/",
     href: "https://humblebee-green.vercel.app/",
   },
@@ -342,7 +342,7 @@ function WebsiteShowcaseCarousel({ sites }: { sites: readonly WorkshopWebsite[] 
         tabIndex={0}
         role="region"
         aria-roledescription="carousel"
-        aria-label="Live site previews — use arrow keys, buttons, or dots"
+        aria-label="Live site previews: use arrow keys, buttons, or dots"
         onKeyDown={(e) => {
           if (e.key === "ArrowLeft") {
             e.preventDefault();
@@ -431,7 +431,7 @@ function WebsiteShowcaseCarousel({ sites }: { sites: readonly WorkshopWebsite[] 
           </div>
           <p className="max-w-[28ch] text-center text-[11px] leading-snug text-[color:color-mix(in_srgb,var(--color-ink)_45%,transparent)]">
             {reduceMotion ? (
-              <>Arrow keys · side buttons · drag — motion-safe mode skips drift.</>
+              <>Arrow keys · side buttons · drag: motion-safe mode skips drift.</>
             ) : (
               <>
                 Gentle auto drift · hover to pause · <kbd className="rounded border px-1">←</kbd>{" "}
@@ -457,7 +457,7 @@ export default function Workshop() {
           <p className="eyebrow !text-[var(--color-deep-sea)]">Recent Builds</p>
           <h2 className="font-heading text-5xl text-[var(--color-deep-sea)]">The Workshop</h2>
           <p className="mt-3 max-w-3xl text-[color:color-mix(in_srgb,var(--color-ink)_78%,transparent)]">
-            Live previews across the builds — drift, arrows, dots, or keyboard when the carousel is focused. Hover to pause
+            Live previews across the builds: drift, arrows, dots, or keyboard when the carousel is focused. Hover to pause
             and scroll inside each embed like a miniature browser pane.
           </p>
         </Reveal>

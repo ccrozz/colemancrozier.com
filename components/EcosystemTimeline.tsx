@@ -11,21 +11,21 @@ const entries = [
     title: "Evergreen Solutions FL",
     role: "Founder & CEO",
     detail:
-      "Field-led ecological restoration across Florida — native plantings, land management, habitat consulting, and invasive species control. Built NTR LVR (ntrlvr.com), a climate-aware garden planner and database for food forests, kitchen gardens, pollinator beds, and flower borders, from zone-matched plant lists to Evergreen pro installs.",
+      "Field-led ecological restoration across Florida: native plantings, land management, habitat consulting, and invasive species control. Built NTR LVR (ntrlvr.com), a climate-aware garden planner and database for food forests, kitchen gardens, pollinator beds, and flower borders, from zone-matched plant lists to Evergreen pro installs.",
   },
   {
     date: "Present",
     title: "Gray Bay Solutions",
     role: "Co-Founder / Tech Lead",
     detail:
-      "Own the technical direction for a portfolio of 8+ client builds spanning web apps, payments, CRM, and AI tooling — shipping on time for $250K+ in combined project value. Translate vague business goals into clear product architecture, then lead engineers and analysts from discovery through launch. Stay close to 20+ stakeholders so delivery stays sharp, risks get cut early, and every handoff leaves the client with something they can actually run.",
+      "Own the technical direction for a portfolio of 8+ client builds spanning web apps, payments, CRM, and AI tooling: shipping on time for $250K+ in combined project value. Translate vague business goals into clear product architecture, then lead engineers and analysts from discovery through launch. Stay close to 20+ stakeholders so delivery stays sharp, risks get cut early, and every handoff leaves the client with something they can actually run.",
   },
   {
     date: "Present",
     title: "Cashflow Verdict",
     role: "Co-Founder",
     detail:
-      "Built Cashflow Verdict (cashflowverdict.com) — statement intelligence for MCA underwriting. Brokers, funders, ISOs, and lenders drop bank or credit-union PDFs and get paper grade, revenue scrub, stacking, holdback, and recurring-debit flags in minutes, without another spreadsheet.",
+      "Built Cashflow Verdict (cashflowverdict.com): statement intelligence for MCA underwriting. Brokers, funders, ISOs, and lenders drop bank or credit-union PDFs and get paper grade, revenue scrub, stacking, holdback, and recurring-debit flags in minutes, without another spreadsheet.",
   },
   {
     date: "Present",
@@ -63,7 +63,7 @@ export default function EcosystemTimeline() {
             <p className="eyebrow">The Ecosystem</p>
             <h2 className="font-heading text-5xl text-[var(--color-shell)]">Resume</h2>
             <p className="mt-3 text-sm leading-relaxed text-[color:color-mix(in_srgb,var(--color-sand)_82%,white)]">
-              Field work and builds — one thread below.
+              Field work and builds: one thread below.
             </p>
           </Reveal>
           <Reveal delay={0.06} className="shrink-0 md:pb-1">

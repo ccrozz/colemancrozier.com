@@ -5,7 +5,7 @@ export const maxDuration = 60;
 
 const PROFILE = "https://soundcloud.com/colecrozier";
 
-/** Only playlists we surface on the site — prevents open proxy fetches. */
+/** Only playlists we surface on the site: prevents open proxy fetches. */
 const ALLOWED_SLUGS = new Set([
   "i-went-to-horny-jail",
   "never-be-the-same",

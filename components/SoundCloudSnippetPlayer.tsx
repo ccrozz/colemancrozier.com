@@ -33,7 +33,7 @@ export function widgetTrackEmbedUrl(trackPageHref: string): string {
 }
 
 /**
- * URL passed to w.soundcloud.com/player `url=` — must NOT be soundcloud.com/track/:digits only
+ * URL passed to w.soundcloud.com/player `url=`: must NOT be soundcloud.com/track/:digits only
  * (widget shows “not a valid SoundCloud URL”). Use api.soundcloud.com/tracks/:id or /user/slug.
  */
 export function embedUrlForWidget(trackPageHref: string): string {
@@ -334,7 +334,7 @@ export function SoundCloudSnippetPlayer({
     />
   ) : (
     <p className="mt-2 text-[11px] text-[color:color-mix(in_srgb,var(--color-ink)_55%,transparent)]">
-      Missing track URL — open on SoundCloud instead.
+      Missing track URL: open on SoundCloud instead.
     </p>
   );
 

@@ -1,23 +1,26 @@
 import { NextResponse } from "next/server";
 
-/** Playlist index can batch many oEmbed calls; allow long enough on serverless. */
+/** Playlist index can batch many track lookups; allow long enough on serverless. */
 export const maxDuration = 60;
 
 const PROFILE = "https://soundcloud.com/colecrozier";
 
 /** Only playlists we surface on the site: prevents open proxy fetches. */
 const ALLOWED_SLUGS = new Set([
+  "dnb",
   "i-went-to-horny-jail",
   "never-be-the-same",
   "night-rider",
+  "old-school",
   "rad-ass-bitch",
 ]);
 
 const OEMBED_API_TRACK = "https://api.soundcloud.com/tracks";
-
-/** Small pauses reduce the chance SoundCloud rate-limits oEmbed when resolving many stubs. */
 const OEMBED_BATCH_DELAY_MS = 100;
 const OEMBED_BATCH_SIZE = 12;
+const API_V2_TRACK_CHUNK = 50;
+
+type TrackOut = { title: string; href: string; artist: string | null };
 
 function extractTopLevelJsonArray(html: string): unknown[] | null {
   const needle = "__sc_hydration = ";
@@ -57,17 +60,6 @@ function extractTopLevelJsonArray(html: string): unknown[] | null {
   return null;
 }
 
-type PlaylistHydration = {
-  title?: string;
-  permalink_url?: string;
-  track_count?: number;
-  tracks?: unknown[];
-};
-
-type PlaylistTrackSlot =
-  | { kind: "full"; title: string; href: string; artist: string | null }
-  | { kind: "stub"; id: number };
-
 function splitOEmbedTitle(raw: string): { title: string; artist: string | null } {
   const trimmed = raw.replace(/\.\s*$/, "").trim();
   const marker = " by ";
@@ -78,6 +70,155 @@ function splitOEmbedTitle(raw: string): { title: string; artist: string | null }
     artist: trimmed.slice(idx + marker.length).trim() || null,
   };
 }
+
+async function discoverClientId(): Promise<string | null> {
+  try {
+    const pageRes = await fetch("https://soundcloud.com", {
+      headers: {
+        "User-Agent": "Mozilla/5.0 (compatible; colemancrozier.com/playlist-index/1.0)",
+        Accept: "text/html",
+      },
+      next: { revalidate: 86_400 },
+    });
+    if (!pageRes.ok) return null;
+    const html = await pageRes.text();
+    const srcs = [...html.matchAll(/<script[^>]+src="(https:\/\/[^"]+sndcdn[^"]+\.js)"/g)].map(
+      (m) => m[1],
+    );
+
+    for (const src of srcs.slice().reverse()) {
+      try {
+        const jsRes = await fetch(src, {
+          headers: {
+            "User-Agent": "Mozilla/5.0 (compatible; colemancrozier.com/playlist-index/1.0)",
+          },
+          next: { revalidate: 86_400 },
+        });
+        if (!jsRes.ok) continue;
+        const body = await jsRes.text();
+        const match =
+          body.match(/client_id:"([A-Za-z0-9]{16,40})"/) ??
+          body.match(/client_id=([A-Za-z0-9]{16,40})/);
+        if (match?.[1]) return match[1];
+      } catch {
+        /* try next asset */
+      }
+    }
+  } catch {
+    /* fall through */
+  }
+  return null;
+}
+
+type ApiV2Track = {
+  id?: number;
+  title?: string;
+  permalink_url?: string;
+  user?: { username?: string };
+};
+
+type ApiV2Playlist = {
+  title?: string;
+  permalink_url?: string;
+  track_count?: number;
+  tracks?: ApiV2Track[];
+};
+
+async function fetchPlaylistViaApiV2(setUrl: string): Promise<{
+  playlistTitle: string;
+  playlistUrl: string;
+  trackCount: number;
+  tracks: TrackOut[];
+} | null> {
+  const clientId = await discoverClientId();
+  if (!clientId) return null;
+
+  const resolveUrl = `https://api-v2.soundcloud.com/resolve?url=${encodeURIComponent(setUrl)}&client_id=${clientId}`;
+  const resolveRes = await fetch(resolveUrl, {
+    headers: {
+      Accept: "application/json",
+      "User-Agent": "Mozilla/5.0 (compatible; colemancrozier.com/playlist-index/1.0)",
+    },
+    // Playlist membership changes when songs are added: keep this fresh.
+    cache: "no-store",
+  });
+  if (!resolveRes.ok) return null;
+
+  const playlist = (await resolveRes.json()) as ApiV2Playlist;
+  const stubs = Array.isArray(playlist.tracks) ? playlist.tracks : [];
+  const ids = stubs
+    .map((t) => (typeof t?.id === "number" ? t.id : null))
+    .filter((id): id is number => id !== null);
+  if (ids.length === 0) return null;
+
+  const byId = new Map<number, ApiV2Track>();
+
+  for (const t of stubs) {
+    if (typeof t?.id === "number" && typeof t.title === "string" && t.title && typeof t.permalink_url === "string") {
+      byId.set(t.id, t);
+    }
+  }
+
+  const missing = ids.filter((id) => !byId.has(id));
+  for (let i = 0; i < missing.length; i += API_V2_TRACK_CHUNK) {
+    const chunk = missing.slice(i, i + API_V2_TRACK_CHUNK);
+    const tracksUrl = `https://api-v2.soundcloud.com/tracks?ids=${chunk.join(",")}&client_id=${clientId}`;
+    try {
+      const tracksRes = await fetch(tracksUrl, {
+        headers: {
+          Accept: "application/json",
+          "User-Agent": "Mozilla/5.0 (compatible; colemancrozier.com/playlist-index/1.0)",
+        },
+        next: { revalidate: 3600 },
+      });
+      if (!tracksRes.ok) continue;
+      const batch = (await tracksRes.json()) as ApiV2Track[];
+      if (!Array.isArray(batch)) continue;
+      for (const t of batch) {
+        if (typeof t?.id === "number") byId.set(t.id, t);
+      }
+    } catch {
+      /* keep going; fall back per-id below */
+    }
+  }
+
+  const tracks: TrackOut[] = ids.map((id) => {
+    const t = byId.get(id);
+    if (t && typeof t.title === "string" && t.title && typeof t.permalink_url === "string") {
+      return {
+        title: t.title,
+        href: t.permalink_url,
+        artist: typeof t.user?.username === "string" ? t.user.username : null,
+      };
+    }
+    return {
+      title: "Track",
+      href: `https://soundcloud.com/track/${id}`,
+      artist: null,
+    };
+  });
+
+  const trackCount =
+    typeof playlist.track_count === "number" ? playlist.track_count : tracks.length;
+
+  return {
+    playlistTitle: typeof playlist.title === "string" ? playlist.title : "Playlist",
+    playlistUrl: typeof playlist.permalink_url === "string" ? playlist.permalink_url : setUrl,
+    trackCount,
+    tracks,
+  };
+}
+
+type PlaylistHydration = {
+  title?: string;
+  permalink_url?: string;
+  track_count?: number;
+  tracks?: unknown[];
+};
+
+type PlaylistTrackSlot =
+  | { kind: "full"; title: string; href: string; artist: string | null }
+  | { kind: "stub"; id: number };
 
 async function fetchTrackTitlesFromOEmbed(
   ids: readonly number[],
@@ -118,33 +259,24 @@ async function fetchTrackTitlesFromOEmbed(
   return out;
 }
 
-export async function GET(
-  _request: Request,
-  context: { params: Promise<{ slug: string }> },
-) {
-  const { slug } = await context.params;
-  if (!slug || !ALLOWED_SLUGS.has(slug)) {
-    return NextResponse.json({ error: "Not found" }, { status: 404 });
-  }
-
-  const setUrl = `${PROFILE}/sets/${slug}`;
+async function fetchPlaylistViaHtml(setUrl: string, slug: string): Promise<{
+  playlistTitle: string;
+  playlistUrl: string;
+  trackCount: number;
+  tracks: TrackOut[];
+} | null> {
   const res = await fetch(setUrl, {
     headers: {
       "User-Agent": "Mozilla/5.0 (compatible; colemancrozier.com/1.0)",
       Accept: "text/html",
     },
-    next: { revalidate: 3600 },
+    cache: "no-store",
   });
-
-  if (!res.ok) {
-    return NextResponse.json({ error: "SoundCloud unavailable" }, { status: 502 });
-  }
+  if (!res.ok) return null;
 
   const html = await res.text();
   const hydrated = extractTopLevelJsonArray(html);
-  if (!hydrated) {
-    return NextResponse.json({ error: "Parse failed" }, { status: 502 });
-  }
+  if (!hydrated) return null;
 
   let playlist: PlaylistHydration | null = null;
   for (const entry of hydrated) {
@@ -160,9 +292,7 @@ export async function GET(
     }
   }
 
-  if (!playlist?.tracks || !Array.isArray(playlist.tracks)) {
-    return NextResponse.json({ error: "No playlist data" }, { status: 502 });
-  }
+  if (!playlist?.tracks || !Array.isArray(playlist.tracks)) return null;
 
   const slots: PlaylistTrackSlot[] = [];
 
@@ -190,33 +320,66 @@ export async function GET(
     }
   }
 
-  const stubIds = slots.filter((s): s is { kind: "stub"; id: number } => s.kind === "stub").map((s) => s.id);
+  const stubIds = slots
+    .filter((s): s is { kind: "stub"; id: number } => s.kind === "stub")
+    .map((s) => s.id);
 
   const stubMeta = stubIds.length > 0 ? await fetchTrackTitlesFromOEmbed(stubIds) : new Map();
 
-  const tracksOut: { title: string; href: string; artist: string | null }[] = [];
-
+  const tracks: TrackOut[] = [];
   for (const slot of slots) {
     if (slot.kind === "full") {
-      tracksOut.push({ title: slot.title, href: slot.href, artist: slot.artist });
+      tracks.push({ title: slot.title, href: slot.href, artist: slot.artist });
       continue;
     }
-
     const meta = stubMeta.get(slot.id);
-    const title = meta?.title ?? `Track`;
-    const artist = meta?.artist ?? null;
-    /** Canonical-ish deep link SoundCloud resolves for playback (best effort without slug). */
-    const href = `https://soundcloud.com/track/${slot.id}`;
-    tracksOut.push({ title, href, artist });
+    tracks.push({
+      title: meta?.title ?? "Track",
+      href: `https://soundcloud.com/track/${slot.id}`,
+      artist: meta?.artist ?? null,
+    });
   }
 
-  const total =
-    typeof playlist.track_count === "number" ? playlist.track_count : tracksOut.length;
-
-  return NextResponse.json({
+  return {
     playlistTitle: typeof playlist.title === "string" ? playlist.title : slug,
     playlistUrl: typeof playlist.permalink_url === "string" ? playlist.permalink_url : setUrl,
-    trackCount: total,
-    tracks: tracksOut,
-  });
+    trackCount: typeof playlist.track_count === "number" ? playlist.track_count : tracks.length,
+    tracks,
+  };
+}
+
+export async function GET(
+  _request: Request,
+  context: { params: Promise<{ slug: string }> },
+) {
+  const { slug } = await context.params;
+  if (!slug || !ALLOWED_SLUGS.has(slug)) {
+    return NextResponse.json({ error: "Not found" }, { status: 404 });
+  }
+
+  const setUrl = `${PROFILE}/sets/${slug}`;
+
+  try {
+    const viaApi = await fetchPlaylistViaApiV2(setUrl);
+    if (viaApi && viaApi.tracks.length > 0) {
+      return NextResponse.json(viaApi, {
+        headers: { "Cache-Control": "public, s-maxage=60, stale-while-revalidate=300" },
+      });
+    }
+  } catch {
+    /* fall back to HTML hydration */
+  }
+
+  try {
+    const viaHtml = await fetchPlaylistViaHtml(setUrl, slug);
+    if (viaHtml && viaHtml.tracks.length > 0) {
+      return NextResponse.json(viaHtml, {
+        headers: { "Cache-Control": "public, s-maxage=60, stale-while-revalidate=300" },
+      });
+    }
+  } catch {
+    /* report failure below */
+  }
+
+  return NextResponse.json({ error: "SoundCloud unavailable" }, { status: 502 });
 }

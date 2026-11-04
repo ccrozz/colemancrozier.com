@@ -239,6 +239,25 @@ const kitchenImages: readonly { src: string; alt: string }[] = [
   { src: "/images/kitchen/kitchen-36.png", alt: "Hamachi crudo: thin raw slices with ponzu, cilantro, and jalapeño on white plate." },
   { src: "/images/kitchen/kitchen-37.png", alt: "Chunky mango ceviche with red onion and herbs on a floral ceramic platter." },
   { src: "/images/kitchen/kitchen-38.png", alt: "Pan-seared fish tacos with pico de gallo and green crema on checkered cloth." },
+  { src: "/images/kitchen/kitchen-39.jpg", alt: "Breakfast plate: sunny-side eggs, sliced steak, and avocado toast on a woven mat" },
+  { src: "/images/kitchen/kitchen-40.jpg", alt: "Medium-rare steak slices with grilled corn and sweet potato fries on a yellow plate" },
+  { src: "/images/kitchen/kitchen-41.jpg", alt: "Baked meat lasagna in a glass dish with bubbled cheese and red sauce" },
+  { src: "/images/kitchen/kitchen-42.jpg", alt: "Wontons in chili oil with crispy chili flakes on a cream plate" },
+  { src: "/images/kitchen/kitchen-43.jpg", alt: "Creamy sausage mushroom rigatoni in a neon yellow bowl on a woven placemat" },
+  { src: "/images/kitchen/kitchen-44.jpg", alt: "Golden baked sausage rolls on a white plate with a side of creamy dipping sauce" },
+  { src: "/images/kitchen/kitchen-45.jpg", alt: "Savory spiral cheese rolls baked golden in a white oval casserole dish" },
+  { src: "/images/kitchen/kitchen-46.jpg", alt: "Homemade chocolate chip cookies piled in a round metal tin on granite" },
+  { src: "/images/kitchen/kitchen-47.jpg", alt: "Cross-section of a pulled meat sandwich on a thick rustic roll" },
+  { src: "/images/kitchen/kitchen-48.jpg", alt: "Bagel breakfast sandwich cross-section with bacon, fried egg, and cream cheese" },
+  { src: "/images/kitchen/kitchen-49.jpg", alt: "Halal cart style chicken over yellow rice with white sauce, hot sauce, and salad" },
+  { src: "/images/kitchen/kitchen-50.jpg", alt: "Six jalapeño cheddar bagels on parchment squares on a sheet pan" },
+  { src: "/images/kitchen/kitchen-51.jpg", alt: "Four scored homemade baguettes on parchment on a glass stovetop" },
+  { src: "/images/kitchen/kitchen-52.jpg", alt: "Shrimp étouffée over white rice with parsley on a white plate" },
+  { src: "/images/kitchen/kitchen-53.jpg", alt: "Homemade bagels topped with rosemary and melted cheddar on a sheet pan" },
+  { src: "/images/kitchen/kitchen-54.jpg", alt: "Ropa vieja with black beans and white rice on a bright red plate" },
+  { src: "/images/kitchen/kitchen-55.jpg", alt: "Fish salad crostini piled on a white Bretagne serving platter" },
+  { src: "/images/kitchen/kitchen-56.jpg", alt: "Steak and tomato bruschetta appetizers lined up on a GoodCook sheet pan" },
+  { src: "/images/kitchen/kitchen-57.jpg", alt: "Fish salad toasts and cucumber rolls on a white Bretagne tray" },
 ];
 
 const garageImages: readonly { src: string; alt: string }[] = [
@@ -312,6 +331,44 @@ const waterfrontImages: readonly { src: string; alt: string }[] = [
   { src: "/images/waterfront/waterfront-48.png", alt: "Mottled filefish hovering above branching soft corals on the reef" },
   { src: "/images/waterfront/waterfront-49.png", alt: "Mixed reef catch laid out on stone beside boat ladder rails" },
   { src: "/images/waterfront/waterfront-50.png", alt: "Hogfish held between twin Yamaha outboards on choppy open ocean" },
+  { src: "/images/waterfront/waterfront-51.jpg", alt: "Redfish held in dark lagoon water at golden hour with black spots near the tail" },
+  { src: "/images/waterfront/waterfront-52.jpg", alt: "Close-up of a redfish tail with black spots held in a blue long-sleeve shirt" },
+  { src: "/images/waterfront/waterfront-53.jpg", alt: "Angler in a blue sun shirt holding a large spotted redfish on a boat deck" },
+  { src: "/images/waterfront/waterfront-54.jpg", alt: "Shirtless angler smiling with a silvery redfish near a Yamaha 150 and bridge" },
+  { src: "/images/waterfront/waterfront-55.jpg", alt: "Shirtless angler laughing while holding a large silvery redfish over open water" },
+  { src: "/images/waterfront/waterfront-56.jpg", alt: "Heavily spotted redfish held over the water with wooden pilings in the background" },
+  { src: "/images/waterfront/waterfront-57.jpg", alt: "Angler in sunglasses holding a large black drum beside a Yamaha 150 at golden hour" },
+  { src: "/images/waterfront/waterfront-58.jpg", alt: "Shirtless angler waist-deep in turquoise water holding a large silver tarpon" },
+  { src: "/images/waterfront/waterfront-59.jpg", alt: "Close-up of a smiling shirtless angler holding a silvery redfish on the boat" },
+  { src: "/images/waterfront/waterfront-60.jpg", alt: "Two shirtless anglers on a center console. One holds a snook and flashes a hand sign" },
+  { src: "/images/waterfront/waterfront-61.jpg", alt: "Angler in a Hurley cap fighting a bent rod from a boat with mangrove shoreline" },
+  { src: "/images/waterfront/waterfront-62.jpg", alt: "Osprey perched on a streetlamp arm clutching a freshly caught fish against blue sky" },
+  { src: "/images/waterfront/waterfront-63.jpg", alt: "Shirtless angler holding a snook on the stern with a bridge and crane behind" },
+  { src: "/images/waterfront/waterfront-64.jpg", alt: "Angler in a blue sun hoodie holding a multi-spotted redfish from the boat gunwale" },
+  { src: "/images/waterfront/waterfront-65.jpg", alt: "Smiling angler releasing a redfish into the water with mangroves at golden hour" },
+  { src: "/images/waterfront/waterfront-66.jpg", alt: "Shirtless angler holding a large redfish near a Yamaha outboard and Power-Pole" },
+  { src: "/images/waterfront/waterfront-67.jpg", alt: "Angler on the bow holding a jack crevalle with a pier and cloudy sky behind" },
+  { src: "/images/waterfront/waterfront-68.jpg", alt: "Surfer launching an aerial off a breaking wave with a spray halo behind the board" },
+  { src: "/images/waterfront/waterfront-69.jpg", alt: "Surfer crouched on a turquoise wave face with whitewater crashing to the left" },
+  { src: "/images/waterfront/waterfront-70.jpg", alt: "Skimboarder in blue trunks catching air off the lip of a cresting wave" },
+  { src: "/images/waterfront/waterfront-71.jpg", alt: "Lone surfer riding the green face of a wave with whitewater peeling left" },
+  { src: "/images/waterfront/waterfront-72.jpg", alt: "Surfer crouched low through a wall of white-capped foam on a bright day" },
+  { src: "/images/waterfront/waterfront-73.jpg", alt: "Surfer carving through white spray on a deep blue breaking wave" },
+  { src: "/images/waterfront/waterfront-74.jpg", alt: "Surfer with arms raised mid-turn on a cresting wave under a pale sky" },
+  { src: "/images/waterfront/waterfront-75.jpg", alt: "Surfer crouched on a turquoise wave with white foam cascading to the right" },
+  { src: "/images/waterfront/waterfront-76.jpg", alt: "Two surfers sharing a long turquoise wave under a hazy bright sky" },
+  { src: "/images/waterfront/waterfront-77.jpg", alt: "Surfer standing tall on a turquoise wave with spray breaking to the right" },
+  { src: "/images/waterfront/waterfront-78.jpg", alt: "Surfer carving a turn with hand near the water and spray erupting behind" },
+  { src: "/images/waterfront/waterfront-79.jpg", alt: "Shirtless surfer arms raised behind a breaking turquoise wave toward the horizon" },
+  { src: "/images/waterfront/waterfront-80.jpg", alt: "Surfer catching air at the crest of a large turquoise wave" },
+  { src: "/images/waterfront/waterfront-81.jpg", alt: "Surfer riding across a turquoise face with whitewash filling the foreground" },
+  { src: "/images/waterfront/waterfront-82.jpg", alt: "Surfer crouched on a teal green wave with foam breaking to the right" },
+  { src: "/images/waterfront/waterfront-83.jpg", alt: "Surfer riding a green-blue face with white spray and sun glitter on the water" },
+  { src: "/images/waterfront/waterfront-84.jpg", alt: "Turquoise wave cresting into white foam under a pale cloudy horizon" },
+  { src: "/images/waterfront/waterfront-85.jpg", alt: "Surfer carving through a blue wave with bright spray and sun glitter" },
+  { src: "/images/waterfront/waterfront-86.jpg", alt: "Surfer silhouetted against turquoise spray on a cresting ocean wave" },
+  { src: "/images/waterfront/waterfront-87.jpg", alt: "Four shirtless friends walking surfboards toward turquoise beach waves" },
+  { src: "/images/waterfront/waterfront-88.jpg", alt: "Surfer carving a blue wave with white foam and sparkling water in the foreground" },
 ];
 
 const GARDEN_ALTS: readonly string[] = [
@@ -473,6 +530,14 @@ const soundcloudPlaylists: readonly SoundPlaylist[] = [
     title: "Iron & Velvet",
     href: `${soundcloudProfile}/sets/rad-ass-bitch`,
   },
+  {
+    title: "Old School",
+    href: `${soundcloudProfile}/sets/old-school`,
+  },
+  {
+    title: "DnB",
+    href: `${soundcloudProfile}/sets/dnb`,
+  },
 ];
 
 function BentoCard({
@@ -529,7 +594,7 @@ export default function MultitudesBento() {
     setStereoLoading(true);
     setStereoFetchError(false);
 
-    fetch(`/api/soundcloud-playlist/${slug}`)
+    fetch(`/api/soundcloud-playlist/${slug}`, { cache: "no-store" })
       .then((res) => (res.ok ? res.json() : Promise.reject()))
       .then((data: StereoPlaylistPayload) => {
         if (!cancelled) setStereoPayload(data);
@@ -743,6 +808,47 @@ export default function MultitudesBento() {
 
           <Reveal className="lg:col-span-6">
             <BentoCard
+              className="bg-[linear-gradient(135deg,color-mix(in_srgb,var(--color-tide)_65%,transparent),var(--color-shell))]"
+              title="The Kitchen"
+              eyebrow="Culinary Science"
+              body="Snapshots from the table: good ingredients, sharp heat, and the kind of meal worth lingering over."
+            >
+              <div className="mt-4">
+                <p className="mb-2 font-mono text-[10px] uppercase tracking-[0.16em] text-[color:color-mix(in_srgb,var(--color-ink)_45%,transparent)]">
+                  {kitchenImages.length} photos
+                </p>
+                <div className="h-[min(70vh,680px)] min-h-[28rem] overflow-y-auto overscroll-contain [scrollbar-gutter:stable]">
+                <div className="grid grid-cols-3 gap-2 sm:grid-cols-4 sm:gap-2.5">
+                  {kitchenImages.map((shot, index) => (
+                    <button
+                      key={shot.src}
+                      type="button"
+                      onClick={() => {
+                        setKitchenLightboxIndex(index);
+                        setGarageLightboxIndex(null);
+                        setWaterfrontLightboxIndex(null);
+                        setGardenLightboxIndex(null);
+                      }}
+                      className="group relative aspect-square overflow-hidden rounded-lg border border-[color:color-mix(in_srgb,var(--color-sand)_25%,transparent)] text-left outline-none ring-[var(--color-lagoon)] transition hover:border-[color:color-mix(in_srgb,var(--color-lagoon)_45%,var(--color-sand))] focus-visible:ring-2"
+                      aria-label={`Open photo: ${shot.alt}`}
+                    >
+                      <Image
+                        src={shot.src}
+                        alt=""
+                        fill
+                        sizes="(max-width: 640px) 30vw, (max-width: 1024px) 22vw, 140px"
+                        className="object-cover transition duration-300 group-hover:scale-[1.04]"
+                      />
+                    </button>
+                  ))}
+                </div>
+                </div>
+              </div>
+            </BentoCard>
+          </Reveal>
+
+          <Reveal className="lg:col-span-6">
+            <BentoCard
               className=""
               title="The Garden"
               eyebrow="Permaculture · Soil Health"
@@ -790,47 +896,6 @@ export default function MultitudesBento() {
                       </button>
                     ))}
                   </div>
-                </div>
-              </div>
-            </BentoCard>
-          </Reveal>
-
-          <Reveal className="lg:col-span-6">
-            <BentoCard
-              className="bg-[linear-gradient(135deg,color-mix(in_srgb,var(--color-tide)_65%,transparent),var(--color-shell))]"
-              title="The Kitchen"
-              eyebrow="Culinary Science"
-              body="Snapshots from the table: good ingredients, sharp heat, and the kind of meal worth lingering over."
-            >
-              <div className="mt-4">
-                <p className="mb-2 font-mono text-[10px] uppercase tracking-[0.16em] text-[color:color-mix(in_srgb,var(--color-ink)_45%,transparent)]">
-                  {kitchenImages.length} photos
-                </p>
-                <div className="h-[min(70vh,680px)] min-h-[28rem] overflow-y-auto overscroll-contain [scrollbar-gutter:stable]">
-                <div className="grid grid-cols-3 gap-2 sm:grid-cols-4 sm:gap-2.5">
-                  {kitchenImages.map((shot, index) => (
-                    <button
-                      key={shot.src}
-                      type="button"
-                      onClick={() => {
-                        setKitchenLightboxIndex(index);
-                        setGarageLightboxIndex(null);
-                        setWaterfrontLightboxIndex(null);
-                        setGardenLightboxIndex(null);
-                      }}
-                      className="group relative aspect-square overflow-hidden rounded-lg border border-[color:color-mix(in_srgb,var(--color-sand)_25%,transparent)] text-left outline-none ring-[var(--color-lagoon)] transition hover:border-[color:color-mix(in_srgb,var(--color-lagoon)_45%,var(--color-sand))] focus-visible:ring-2"
-                      aria-label={`Open photo: ${shot.alt}`}
-                    >
-                      <Image
-                        src={shot.src}
-                        alt=""
-                        fill
-                        sizes="(max-width: 640px) 30vw, (max-width: 1024px) 22vw, 140px"
-                        className="object-cover transition duration-300 group-hover:scale-[1.04]"
-                      />
-                    </button>
-                  ))}
-                </div>
                 </div>
               </div>
             </BentoCard>
@@ -1109,7 +1174,7 @@ export default function MultitudesBento() {
 
                 {!stereoLoading && stereoPayload ? (
                   <p className="mt-3 text-[11px] text-[color:color-mix(in_srgb,var(--color-ink)_48%,transparent)]">
-                    {stereoPayload.tracks.length} tracks ·{' '}
+                    {stereoPayload.trackCount || stereoPayload.tracks.length} tracks ·{' '}
                     <a
                       href={stereoPayload.playlistUrl}
                       target="_blank"

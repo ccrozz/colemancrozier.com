@@ -258,6 +258,11 @@ const kitchenImages: readonly { src: string; alt: string }[] = [
   { src: "/images/kitchen/kitchen-55.jpg", alt: "Fish salad crostini piled on a white Bretagne serving platter" },
   { src: "/images/kitchen/kitchen-56.jpg", alt: "Steak and tomato bruschetta appetizers lined up on a GoodCook sheet pan" },
   { src: "/images/kitchen/kitchen-57.jpg", alt: "Fish salad toasts and cucumber rolls on a white Bretagne tray" },
+  { src: "/images/kitchen/kitchen-58.jpg", alt: "Carved roast turkey platter with rosemary and grapes on a Bretagne serving tray" },
+  { src: "/images/kitchen/kitchen-59.jpg", alt: "Shakshuka with five eggs in a tomato pepper skillet topped with fresh herbs" },
+  { src: "/images/kitchen/kitchen-60.jpg", alt: "Paper plate of jambalaya, fried chicken, black-eyed peas, and buttered biscuit" },
+  { src: "/images/kitchen/kitchen-61.jpg", alt: "Three crispy birria tacos with cilantro, onion, and lime on a red plate" },
+  { src: "/images/kitchen/kitchen-62.jpg", alt: "Chicken parmesan over linguine with melted mozzarella on a blue plate" },
 ];
 
 const garageImages: readonly { src: string; alt: string }[] = [
@@ -369,6 +374,12 @@ const waterfrontImages: readonly { src: string; alt: string }[] = [
   { src: "/images/waterfront/waterfront-86.jpg", alt: "Surfer silhouetted against turquoise spray on a cresting ocean wave" },
   { src: "/images/waterfront/waterfront-87.jpg", alt: "Four shirtless friends walking surfboards toward turquoise beach waves" },
   { src: "/images/waterfront/waterfront-88.jpg", alt: "Surfer carving a blue wave with white foam and sparkling water in the foreground" },
+  { src: "/images/waterfront/waterfront-89.jpg", alt: "Two shirtless surfers on wet sand holding boards with thumbs-up and shaka under cloudy blue sky" },
+  { src: "/images/waterfront/waterfront-90.jpg", alt: "Angler in a turquoise headband holding a striped sheepshead on the boat at sunset" },
+  { src: "/images/waterfront/waterfront-91.jpg", alt: "Surfer crouched on a white board riding a teal wave with white spray behind" },
+  { src: "/images/waterfront/waterfront-92.jpg", alt: "Shirtless surfer walking a white board out of the ocean onto wet sand with beach buildings behind" },
+  { src: "/images/waterfront/waterfront-93.jpg", alt: "Purple-hazy ocean scene with a white boat offshore and two people standing in the surf" },
+  { src: "/images/waterfront/waterfront-94.jpg", alt: "Surfer from behind on a light green board riding whitewash under a pale blue sky" },
 ];
 
 const GARDEN_ALTS: readonly string[] = [

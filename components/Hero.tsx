@@ -102,7 +102,7 @@ export default function Hero() {
             <em className="italic text-[var(--color-sand)]">land, sea &amp; data.</em>
           </h1>
           <p className="mx-auto max-w-md text-base leading-relaxed text-[color:color-mix(in_srgb,var(--color-sand)_82%,white)]">
-          UF Alumni. Restoration Ecologist. Agronomist. Full-stack developer.
+          UF Alumni. Restoration Ecologist. Funding specialist. Full-stack developer.
             Angler. Surfer. Photographer. Coleman Crozier.
           </p>
           <a
